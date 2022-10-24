@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hit Dice" />
+
+            <EditText
+                android:id="@+id/etHD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Number"
+                android:padding="5dp"
+                />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CON Modifier" />
+
+            <EditText
+                android:id="@+id/etCM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Number"
+                android:padding="5dp" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="0dp" />
+
+            <CheckBox
+                android:id="@+id/cbTF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tough feat?" />
+
+        </LinearLayout>
+
+//botoes
+
+// fila1
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Barbarian"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnBarbarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/barbarian" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bard"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnBard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bard" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cleric"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnCleric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/cleric" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+// fila2
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Druid"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnDruid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/druid" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Figther"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnFigther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/fighter" />
+
+            </LinearLayout>
+
+           <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Monk"
+                   android:textAlignment="center"
+                   android:gravity="center"
+                   android:textStyle="bold"/>
+
+               <ImageButton
+                   android:id="@+id/btnMonk"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:src="@drawable/monk" />
+
+           </LinearLayout>
+
+
+        </LinearLayout>
+
+//fila3
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paladin"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnPaladin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/paladin" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ranger"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnRanger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ranger" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rogue"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnRogue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/rogue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+fila4
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sorcerer"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnSorcerer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/sorcerer" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Warlock"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnWarlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/warlock" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wizard"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnWizard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/wizard" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF5722"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="CALCULATE"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
