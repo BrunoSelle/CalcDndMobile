@@ -8,17 +8,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnCalculate;
     private ImageButton btnBarbarian, btnBard, btnCleric, btnDruid, btnFigther, btnMonk, btnPaladin, btnRanger, btnRogue, btnSorcerer, btnWarlock, btnWizard;
-    private boolean tough, bBarbarian, bBard, bCleric, bDruid, bFigther, bMonk, bPaladin, bRanger, bRogue, bSorcerer, bWarlock, bWizard;
-    protected int CON, iBarbarian, iBard, iCleric, iDruid, iFigther, iMonk, iPaladin, iRanger, iRogue, iSorcerer, iWarlock, iWizard;
-    private int allHD;
+    private CheckBox cbTough;
     private EditText etCM, etHD;
+    private int valor=0, allHD=0, CON=0, vTotal=0, vtough=0, iBarbarian=0, vBarbarian=0, iBard=0, vBard=0, iCleric=0, vCleric=0, iDruid=0, vDruid=0, iFigther=0, vFigther=0, iMonk=0, vMonk=0, iPaladin=0, vPaladin=0, iRanger=0, vRanger=0, iRogue=0, vRogue=0, iSorcerer=0, vSorcerer=0, iWarlock=0, vWarlock=0, iWizard=0, vWizard=0;
 
 
     @Override
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         etHD.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
-                if (!etHD.getText().toString().isEmpty()){
+                if (!etHD.getText().toString().isEmpty())
+                {
                     allHD = Integer.valueOf(etHD.getText().toString());
                 }
             }
@@ -42,190 +44,260 @@ public class MainActivity extends AppCompatActivity {
         etCM.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
-                if (!etCM.getText().toString().isEmpty()){
+                if (!etCM.getText().toString().isEmpty())
+                {
                     CON = Integer.valueOf(etCM.getText().toString());
                 }
             }
         });
 
+//Tough
+        cbTough = findViewById(R.id.cbTF);
+        if(cbTough.isChecked()){
 
-    //Barbarian
+            vtough = allHD*2;
+
+        }
+        else
+        {
+
+            vtough = 0;
+
+        }
+
+
+
+
+//Barbarian
         btnBarbarian = findViewById(R.id.btnBarbarian);
-        btnBarbarian.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
+        btnBarbarian.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
 
-                bBarbarian = true;
+                    if (allHD >= iBarbarian) {
+                        iBarbarian = alerta();
+                        allHD = allHD - iBarbarian;
+                        vBarbarian = (7 + CON) * iBarbarian;
+                    }
+                    else {
+                        erro();
+                    }
 
-            if (allHD >= iBarbarian){
-            iBarbarian = alerta();
-            allHD = allHD - iBarbarian;
-            }
-
-            }
-        });
-
-    //Bard
-        Button button = findViewById(R.id.btnBard);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bBard = true;
-
-                if (allHD >= iBard){
-                    iBard = alerta();
-                    allHD = allHD - iBard;
-                }
-            }
-
-        });
-
-    //Cleric
-        Button button = findViewById(R.id.btnCleric);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bCleric = true;
-
-                if (allHD >= iCleric){
-                    iCleric = alerta();
-                    allHD = allHD - iCleric;
-                }
-            }
-
-        });
-
-    //Druid
-        Button button = findViewById(R.id.btnDruid);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bDruid = true;
-
-            if (allHD >= iDruid){
-                iDruid = alerta();
-                allHD = allHD - iDruid;
-            }
-
-            }
-        });
-
-    //Figther
-        Button button = findViewById(R.id.btnFigther);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bFigther = true;
-
-                if (allHD >= iFigther){
-                    iFigther = alerta();
-                    allHD = allHD - iFigther;
                 }
 
-            }
-        });
+            });
 
-    //Monk
-        Button button = findViewById(R.id.btnMonk);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bMonk = true;
+//Bard
+        btnBard = findViewById(R.id.btnBard);
+        btnBard.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
 
-                if (allHD >= iMonk){
-                    iMonk = alerta();
-                    allHD = allHD - iMonk;
+                    if (allHD >= iBard) {
+                        iBard = alerta();
+                        allHD = allHD - iBard;
+                        vBard = (5 + CON) * iBard;
+                    }
+                    else {
+                        erro();
+                    }
                 }
 
-            }
-        });
+            });
 
-    //Paladin
-        Button button = findViewById(R.id.btnPaladin);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bPaladin = true;
 
-                if (allHD >= iPaladin){
-                    iPaladin = alerta();
-                    allHD = allHD - iPaladin;
+//Cleric
+        btnCleric = findViewById(R.id.btnCleric);
+        btnCleric.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    if (allHD >= iCleric) {
+                        iCleric = alerta();
+                        allHD = allHD - iCleric;
+                        vCleric = (5 + CON) * iCleric;
+                    }
+                    else {
+                        erro();
+                    }
                 }
 
-            }
-        });
+            });
 
-    //Ranger
-        Button button = findViewById(R.id.btnRanger);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bRanger = true;
 
-                if (allHD >= iRanger){
-                    iRanger = alerta();
-                    allHD = allHD - iRanger;
+//Druid
+        btnDruid = findViewById(R.id.btnDruid);
+        btnDruid.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    if (allHD >= iDruid) {
+                        iDruid = alerta();
+                        allHD = allHD - iDruid;
+                        vDruid = (5 + CON) * iDruid;
+                    }
+                    else {
+                        erro();
+                    }
+                }
+            });
+
+
+//Figther
+        btnFigther = findViewById(R.id.btnFigther);
+        btnFigther.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    if (allHD >= iFigther) {
+                        iFigther = alerta();
+                        allHD = allHD - iFigther;
+                        vFigther = (6 + CON) * iFigther;
+                    }
+                    else {
+                        erro();
+                    }
+                }
+            });
+
+//Monk
+        btnMonk = findViewById(R.id.btnMonk);
+        btnMonk.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    if (allHD >= iMonk) {
+                        iMonk = alerta();
+                        allHD = allHD - iMonk;
+                        vMonk = (5 + CON) * iMonk;
+                    }
+                    else {
+                        erro();
+                    }
+                }
+            });
+
+//Paladin
+        btnPaladin = findViewById(R.id.btnPaladin);
+        btnPaladin.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    if (allHD >= iPaladin) {
+                        iPaladin = alerta();
+                        allHD = allHD - iPaladin;
+                        vPaladin = (6 + CON) * iPaladin;
+                    }
+                    else {
+                        erro();
+                    }
+                }
+            });
+
+//Ranger
+        btnRanger = findViewById(R.id.btnRanger);
+        btnRanger.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    if (allHD >= iRanger) {
+                        iRanger = alerta();
+                        allHD = allHD - iRanger;
+                        vRanger = (6 + CON) * iRanger;
+                    }
+                    else {
+                        erro();
+                    }
+                }
+            });
+
+//Rogue
+        btnRogue = findViewById(R.id.btnRogue);
+        btnRogue.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    if (allHD >= iRogue) {
+                        iRogue = alerta();
+                        allHD = allHD - iRogue;
+                        vRogue = (5 + CON) * iRogue;
+                    }
+                    else {
+                        erro();
+                    }
                 }
 
-            }
-        });
+            });
 
-    //Rogue
-        Button button = findViewById(R.id.btnRogue);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bRogue = true;
+//Sorcerer
+        btnSorcerer = findViewById(R.id.btnSorcerer);
+        btnSorcerer.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
 
-                if (allHD >= iRogue){
-                    iRogue = alerta();
-                    allHD = allHD - iRogue;
+                    if (allHD >= iSorcerer) {
+                        iSorcerer = alerta();
+                        allHD = allHD - iSorcerer;
+                        vSorcerer = (4 + CON) * iSorcerer;
+                    }
+                    else {
+                        erro();
+                    }
                 }
-            }
+            });
 
-        });
+//Warlock
+        btnWarlock = findViewById(R.id.btnWarlock);
+        btnWarlock.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
 
-    //Sorcerer
-        Button button = findViewById(R.id.btnSorcerer);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bSorcerer = true;
-
-                if (allHD >= iSorcerer){
-                    iSorcerer = alerta();
-                    allHD = allHD - iSorcerer;
+                    if (allHD >= iWarlock) {
+                        iWarlock = alerta();
+                        allHD = allHD - iWarlock;
+                        vWarlock = (5 + CON) * iWarlock;
+                    }
+                    else {
+                        erro();
+                    }
                 }
+            });
 
-            }
-        });
+//Wizard
+        btnWizard = findViewById(R.id.btnWizard);
+        btnWizard.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
 
-    //Warlock
-        Button button = findViewById(R.id.btnWarlock);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bWarlock = true;
-
-                if (allHD >= iWarlock){
-                    iWarlock = alerta();
-                    allHD = allHD - iWarlock;
+                    if (allHD >= iWizard) {
+                        iWizard = alerta();
+                        allHD = allHD - iWizard;
+                        vWizard = (4 + CON) * iWizard;
+                    }
+                    else {
+                        erro();
+                    }
                 }
+            });
 
-            }
-        });
+//Calculate
+        btnCalculate = findViewById(R.id.btnCalculate);
 
-    //Wizard
-        Button button = findViewById(R.id.btnWizard);
-        button.setOnClickListener (new View.OnClickListener(){
-            public void onClick(View v) {
-            bWizard = true;
+        if (allHD != 0) {
 
-                if (allHD >= iWizard){
-                    iWizard = alerta();
-                    allHD = allHD - iWizard;
-            }
+            btnCalculate.setEnabled(false);
 
-            }
-        });
+        } else {
+            btnCalculate.setOnClickListener (new View.OnClickListener(){
+            public void onClick(View v){
+
+
+                    vTotal = vBarbarian + vBard + vCleric + vDruid + vFigther + vMonk + vPaladin + vRanger + vRogue + vSorcerer + vWarlock + vWizard + vtough;
+
+                    AlertDialog.Builder result = new AlertDialog.Builder(MainActivity.this);
+                    result.setTitle("HD: " + allHD + " \nCON: " + CON + " \nVida média " + vTotal);
+                    result.setNeutralButton("ok", null);
+                    result.show();
+                    }
+
+            });
+       }
+
     }
 
+// ALERTA
     private int alerta (){
-        int valor = 0;
         AlertDialog.Builder alerta = new AlertDialog.Builder(MainActivity.this);
-        alerta.setIcon(android.R.drawable.ic_input_add);
         alerta.setTitle("Quantidade de níveis na classe");
         EditText etNroClasse = new EditText(MainActivity.this);
-//É possivel usar os atributos de montagem de tela via código
         etNroClasse.setHint("Numero");
         alerta.setView(etNroClasse);
 
@@ -240,6 +312,16 @@ public class MainActivity extends AppCompatActivity {
         });
         alerta.show();
         return valor;
+    }
+
+//  ERRO
+    private void erro (){
+
+        AlertDialog.Builder erro = new AlertDialog.Builder(MainActivity.this);
+        erro.setTitle("Não há HD para distribuir");
+        erro.setPositiveButton("ok", null);
+        erro.show();
+
     }
 
 
