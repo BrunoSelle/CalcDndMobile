@@ -62,78 +62,148 @@
 
         </LinearLayout>
 
-//botoes
+//classes
 
 // fila1
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center">
 
+// Barbarian
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Barbarian"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnBarbarian"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Barbarian:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvBarbarian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etBarbarian"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/barbarian"/>
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/barbarian"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
+// Bard
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bard"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnBard"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bard:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvBard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etBard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/bard" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/bard"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
+// Cleric
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Cleric"
-                    android:textAlignment="center"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnCleric"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cleric:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvCleric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etCleric"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/cleric" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/cleric"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
@@ -144,74 +214,144 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center">
 
+// Druid
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Druid"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnDruid"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Druid:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvDruid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etDruid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/druid" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/druid"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
+// Fighter
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Figther"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnFigther"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fighter:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvFighter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etFighter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/fighter" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/fighter"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
-           <LinearLayout
+// Monk
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:text="Monk"
-                   android:textAlignment="center"
-                   android:gravity="center"
-                   android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-               <ImageButton
-                   android:id="@+id/btnMonk"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_weight="1"
-                   android:src="@drawable/monk" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Monk:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
 
-           </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvMonk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
 
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etMonk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/monk"
+                    android:inputType="number"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -220,71 +360,142 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center">
 
+// Paladin
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Paladin"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnPaladin"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Paladin:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvPaladin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etPaladin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/paladin" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/paladin"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
+// Ranger
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ranger"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnRanger"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ranger:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvRanger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etRanger"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ranger" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/ranger"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
+// Rogue
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rogue"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnRogue"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Rogue:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvRogue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etRogue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/rogue" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/rogue"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
@@ -295,71 +506,141 @@ fila4
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center">
 
+// Sorcerer
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sorcerer"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnSorcerer"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sorcerer:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvSorcerer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etSorcerer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/sorcerer" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/sorcerer"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
+// Warlock
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Warlock"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnWarlock"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Warlock:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvWarlock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etWarlock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/warlock" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/warlock"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
+// Wizard
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Wizard"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnWizard"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Wizard:"
+                        android:textAlignment="textStart"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvWizard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etWizard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/wizard" />
+                    android:padding="5dp"
+                    android:drawableTop="@drawable/wizard"
+                    android:inputType="number"/>
 
             </LinearLayout>
 
