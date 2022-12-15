@@ -69,8 +69,15 @@ public class MainActivity extends AppCompatActivity {
                         tvBarbarian.setText(String.valueOf(iBarbarian));
                     }
                     else {
-                        erro();
-                        iBarbarian = 0;
+                        if (cHD == 0){
+                            etBarbarian.setText(String.valueOf(""));
+                            iBarbarian = 0;
+                            erro0();
+                        } else {
+                            etBarbarian.setText(String.valueOf(""));
+                            iBarbarian = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -91,8 +98,15 @@ public class MainActivity extends AppCompatActivity {
                         tvBard.setText(String.valueOf(iBard));
                     }
                     else {
-                        erro();
-                        iBard = 0;
+                        if (cHD == 0){
+                            etBard.setText(String.valueOf(""));
+                            iBard = 0;
+                            erro0();
+                        } else {
+                            etBard.setText(String.valueOf(""));
+                            iBard = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -113,8 +127,15 @@ public class MainActivity extends AppCompatActivity {
                         tvCleric.setText(String.valueOf(iCleric));
                     }
                     else {
-                        erro();
-                        iCleric = 0;
+                        if (cHD == 0){
+                            etCleric.setText(String.valueOf(""));
+                            iCleric = 0;
+                            erro0();
+                        } else {
+                            etCleric.setText(String.valueOf(""));
+                            iCleric = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -135,8 +156,15 @@ public class MainActivity extends AppCompatActivity {
                         tvDruid.setText(String.valueOf(iDruid));
                     }
                     else {
-                        erro();
-                        iDruid = 0;
+                        if (cHD == 0){
+                            etDruid.setText(String.valueOf(""));
+                            iDruid = 0;
+                            erro0();
+                        } else {
+                            etDruid.setText(String.valueOf(""));
+                            iDruid = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -157,8 +185,15 @@ public class MainActivity extends AppCompatActivity {
                         tvFighter.setText(String.valueOf(iFighter));
                     }
                     else {
-                        erro();
-                        iFighter = 0;
+                        if (cHD == 0){
+                            etFighter.setText(String.valueOf(""));
+                            iFighter = 0;
+                            erro0();
+                        } else {
+                            etFighter.setText(String.valueOf(""));
+                            iFighter = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -179,8 +214,15 @@ public class MainActivity extends AppCompatActivity {
                         tvMonk.setText(String.valueOf(iMonk));
                     }
                     else {
-                        erro();
-                        iMonk = 0;
+                        if (cHD == 0){
+                            etMonk.setText(String.valueOf(""));
+                            iMonk = 0;
+                            erro0();
+                        } else {
+                            etMonk.setText(String.valueOf(""));
+                            iMonk = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -201,8 +243,15 @@ public class MainActivity extends AppCompatActivity {
                         tvPaladin.setText(String.valueOf(iPaladin));
                     }
                     else {
-                        erro();
-                        iPaladin = 0;
+                        if (cHD == 0){
+                            etPaladin.setText(String.valueOf(""));
+                            iPaladin = 0;
+                            erro0();
+                        } else {
+                            etPaladin.setText(String.valueOf(""));
+                            iPaladin = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -223,8 +272,15 @@ public class MainActivity extends AppCompatActivity {
                         tvRanger.setText(String.valueOf(iRanger));
                     }
                     else {
-                        erro();
-                        iRanger = 0;
+                        if (cHD == 0){
+                            etRanger.setText(String.valueOf(""));
+                            iRanger = 0;
+                            erro0();
+                        } else {
+                            etRanger.setText(String.valueOf(""));
+                            iRanger = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -245,8 +301,15 @@ public class MainActivity extends AppCompatActivity {
                         tvRogue.setText(String.valueOf(iRogue));
                     }
                     else {
-                        erro();
-                        iRogue = 0;
+                        if (cHD == 0){
+                            etRogue.setText(String.valueOf(""));
+                            iRogue = 0;
+                            erro0();
+                        } else {
+                            etRogue.setText(String.valueOf(""));
+                            iRogue = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -267,8 +330,15 @@ public class MainActivity extends AppCompatActivity {
                         tvSorcerer.setText(String.valueOf(iSorcerer));
                     }
                     else {
-                        erro();
-                        iSorcerer = 0;
+                        if (cHD == 0){
+                            etSorcerer.setText(String.valueOf(""));
+                            iSorcerer = 0;
+                            erro0();
+                        } else {
+                            etSorcerer.setText(String.valueOf(""));
+                            iSorcerer = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -289,8 +359,15 @@ public class MainActivity extends AppCompatActivity {
                         tvWarlock.setText(String.valueOf(iWarlock));
                     }
                     else {
-                        erro();
-                        iWarlock = 0;
+                        if (cHD == 0){
+                            etWarlock.setText(String.valueOf(""));
+                            iWarlock = 0;
+                            erro0();
+                        } else {
+                            etWarlock.setText(String.valueOf(""));
+                            iWarlock = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -311,8 +388,15 @@ public class MainActivity extends AppCompatActivity {
                         tvWizard.setText(String.valueOf(iWizard));
                     }
                     else {
-                        erro();
-                        iWizard = 0;
+                        if (cHD == 0){
+                            etWizard.setText(String.valueOf(""));
+                            iWizard = 0;
+                            erro0();
+                        } else {
+                            etWizard.setText(String.valueOf(""));
+                            iWizard = 0;
+                            erro();
+                        }
                     }
                 }
             }
@@ -324,10 +408,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
             if (cHD != 0) {
 
-                AlertDialog.Builder dvs = new AlertDialog.Builder(MainActivity.this);
-                dvs.setTitle("Ainda há DV's nao informados");
-                dvs.setNeutralButton("ok", null);
-                dvs.show();
+                erro();
 
         } else {
 
@@ -353,7 +434,7 @@ public class MainActivity extends AppCompatActivity {
                     vTotal = vBarbarian + vBard + vCleric + vDruid + vFighter + vMonk + vPaladin + vRanger + vRogue + vSorcerer + vWarlock + vWizard + vtough;
 
                     AlertDialog.Builder result = new AlertDialog.Builder(MainActivity.this);
-                    result.setTitle("Vida média " + vTotal);
+                    result.setTitle("Average total life: " + vTotal);
                     result.setNeutralButton("ok", null);
                     result.show();
                     }
@@ -367,11 +448,19 @@ public class MainActivity extends AppCompatActivity {
     private void erro (){
 
         AlertDialog.Builder erro = new AlertDialog.Builder(MainActivity.this);
-        erro.setTitle("Não há HD para distribuir");
+        erro.setTitle("Still " + cHD + " remaining HD");
         erro.setPositiveButton("ok", null);
         erro.show();
 
     }
+    //  ERRO 0
+    private void erro0 (){
 
+        AlertDialog.Builder erro = new AlertDialog.Builder(MainActivity.this);
+        erro.setTitle("No more HD available");
+        erro.setPositiveButton("ok", null);
+        erro.show();
+
+    }
 
 }
