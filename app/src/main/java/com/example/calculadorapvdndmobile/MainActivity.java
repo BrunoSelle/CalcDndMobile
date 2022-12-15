@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,7 +37,18 @@ public class MainActivity extends AppCompatActivity {
                 {
                     allHD = Integer.valueOf(etHD.getText().toString());
                     cHD = allHD;
+                    etHD.setFocusable(false);
                 }
+            }
+        });
+
+        etHD.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                erro();
+
+                return false;
             }
         });
 
@@ -49,6 +61,25 @@ public class MainActivity extends AppCompatActivity {
                 if (!etCM.getText().toString().isEmpty())
                 {
                     CON = Integer.valueOf(etCM.getText().toString());
+                }
+            }
+        });
+        etCM.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                if (CON > 0){
+
+                negativo();
+
+                return true;
+
+                }
+
+                else {
+
+                positivo();
+                return true;
+
                 }
             }
         });
@@ -67,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iBarbarian) {
                         cHD = cHD - iBarbarian;
                         tvBarbarian.setText(String.valueOf(iBarbarian));
+//                        bBarbarian = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -96,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iBard) {
                         cHD = cHD - iBard;
                         tvBard.setText(String.valueOf(iBard));
+//                        bBard = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -125,6 +160,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iCleric) {
                         cHD = cHD - iCleric;
                         tvCleric.setText(String.valueOf(iCleric));
+//                        bCleric = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -154,6 +191,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iDruid) {
                         cHD = cHD - iDruid;
                         tvDruid.setText(String.valueOf(iDruid));
+//                      bDruid = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -183,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iFighter) {
                         cHD = cHD - iFighter;
                         tvFighter.setText(String.valueOf(iFighter));
+//                        bFighter = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -212,6 +253,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iMonk) {
                         cHD = cHD - iMonk;
                         tvMonk.setText(String.valueOf(iMonk));
+//                        bMonk = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -241,6 +284,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iPaladin) {
                         cHD = cHD - iPaladin;
                         tvPaladin.setText(String.valueOf(iPaladin));
+//                        bPaladin = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -270,6 +315,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iRanger) {
                         cHD = cHD - iRanger;
                         tvRanger.setText(String.valueOf(iRanger));
+//                        bRanger = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -299,6 +346,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iRogue) {
                         cHD = cHD - iRogue;
                         tvRogue.setText(String.valueOf(iRogue));
+//                        bRogue = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -328,6 +377,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iSorcerer) {
                         cHD = cHD - iSorcerer;
                         tvSorcerer.setText(String.valueOf(iSorcerer));
+//                        bSorcerer= true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -357,6 +408,8 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iWarlock) {
                         cHD = cHD - iWarlock;
                         tvWarlock.setText(String.valueOf(iWarlock));
+//                        bWarlock = true;
+
                     }
                     else {
                         if (cHD == 0){
@@ -386,6 +439,7 @@ public class MainActivity extends AppCompatActivity {
                     if (cHD >= iWizard) {
                         cHD = cHD - iWizard;
                         tvWizard.setText(String.valueOf(iWizard));
+//                        bWizard = true;
                     }
                     else {
                         if (cHD == 0){
@@ -453,13 +507,48 @@ public class MainActivity extends AppCompatActivity {
         erro.show();
 
     }
-    //  ERRO 0
+//  ERRO 0
     private void erro0 (){
 
         AlertDialog.Builder erro = new AlertDialog.Builder(MainActivity.this);
         erro.setTitle("No more HD available");
         erro.setPositiveButton("ok", null);
         erro.show();
+
+    }
+
+// CON NEGATIVO
+    private int negativo (){
+        AlertDialog.Builder negativo = new AlertDialog.Builder(this);
+        negativo.setTitle("Negative Atribute?");
+        negativo.setNegativeButton("No", null);
+        negativo.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                CON = CON * (-1);
+                etCM.setTextColor(Color.rgb(255,0,0));
+                etCM.setText(String.valueOf(CON));
+            }
+        });
+        negativo.show();
+        return CON;
+
+
+// CON POSITIVO
+    }    private int positivo (){
+        AlertDialog.Builder positivo = new AlertDialog.Builder(this);
+        positivo.setTitle("Positive Atribute?");
+        positivo.setNegativeButton("No", null);
+        positivo.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                CON = CON * (-1);
+                etCM.setTextColor(Color.rgb(0,0,0));
+                etCM.setText(String.valueOf(CON));
+            }
+        });
+        positivo.show();
+        return CON;
 
     }
 
